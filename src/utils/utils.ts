@@ -1,8 +1,15 @@
-import { parse } from 'qs';
+/*
+ * @Description: 
+ * @Autor: 吴浩舟
+ * @Date: 2021-05-12 11:26:20
+ * @LastEditors: 吴浩舟
+ * @LastEditTime: 2022-07-05 16:42:53
+ */
 
-const reg = /(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+(?::\d+)?|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/;
 
-export const isUrl = (path: string): boolean => reg.test(path);
-
-export const getPageQuery = () => parse(window.location.href.split('?')[1]);
+export * from './tools/get-limit-str';
+export * from './tools/get-str-length';
+export * from './tools/qs';
+export * from './tools/safe-json';
+export * from './tools/timer';
 
